@@ -1,6 +1,6 @@
-package transportion;
+package transportation;
 
-public class Horse implements Vehicle, Animal
+public class Horse implements Vehicle , Animal
 {
     private int fuel = 0;
     private String name;
@@ -17,40 +17,54 @@ public class Horse implements Vehicle, Animal
         this.name  = name;
     }
 
+
+
+    // Getters and Setters
+    public String getName()
+    {
+        return name;
+    }
+
+    public void setName(String name)
+    {
+        this.name = name;
+    }
+
+
     // Implement interfaces
     @Override
     public void move()
     {
-        fuel = fuel -1
+        fuel = fuel -1;
     }
 
     @Override
     public void eat(int i)
     {
-        fuel  = fuel + i
+        fuel  = fuel + i;
     }
 
     @Override
     public String speak()
     {
-        return "Neigh"
+        return "Neigh";
     }
 
-    @Overridepublic 
-    public String getPath();
+    @Override
+    public String getPath()
     {
-        return "grass"
+        return "grass";
     }
     
     @Override
-    public void getFuel();
+    public int getFuel()
     {
-        return fuel
+        return fuel;
     }
 
     @Override
-    public void addFuel(int i);
+    public void addFuel(int i)
     {
-        eat(i)
+        eat(i);
     }
 }
